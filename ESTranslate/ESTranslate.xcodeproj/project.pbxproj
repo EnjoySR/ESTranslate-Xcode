@@ -1,0 +1,290 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F7F9F151CEE9B5400AA622D /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7F9F141CEE9B5400AA622D /* AppKit.framework */; };
+		4F7F9F171CEE9B5400AA622D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7F9F161CEE9B5400AA622D /* Foundation.framework */; };
+		4F7F9F1B1CEE9B5400AA622D /* ESTranslate.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = 4F7F9F1A1CEE9B5400AA622D /* ESTranslate.xcscheme */; };
+		4F7F9F1E1CEE9B5400AA622D /* ESTranslate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F9F1D1CEE9B5400AA622D /* ESTranslate.m */; };
+		4F7F9F211CEE9B5400AA622D /* NSObject_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F9F201CEE9B5400AA622D /* NSObject_Extension.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4F7F9F111CEE9B5400AA622D /* ESTranslate.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ESTranslate.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F7F9F141CEE9B5400AA622D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		4F7F9F161CEE9B5400AA622D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		4F7F9F1A1CEE9B5400AA622D /* ESTranslate.xcscheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = ESTranslate.xcscheme; path = ESTranslate.xcodeproj/xcshareddata/xcschemes/ESTranslate.xcscheme; sourceTree = SOURCE_ROOT; };
+		4F7F9F1C1CEE9B5400AA622D /* ESTranslate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESTranslate.h; sourceTree = "<group>"; };
+		4F7F9F1D1CEE9B5400AA622D /* ESTranslate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ESTranslate.m; sourceTree = "<group>"; };
+		4F7F9F1F1CEE9B5400AA622D /* NSObject_Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSObject_Extension.h; sourceTree = "<group>"; };
+		4F7F9F201CEE9B5400AA622D /* NSObject_Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSObject_Extension.m; sourceTree = "<group>"; };
+		4F7F9F221CEE9B5400AA622D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4F7F9F0F1CEE9B5400AA622D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F7F9F151CEE9B5400AA622D /* AppKit.framework in Frameworks */,
+				4F7F9F171CEE9B5400AA622D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4F7F9F081CEE9B5400AA622D = {
+			isa = PBXGroup;
+			children = (
+				4F7F9F181CEE9B5400AA622D /* ESTranslate */,
+				4F7F9F131CEE9B5400AA622D /* Frameworks */,
+				4F7F9F121CEE9B5400AA622D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4F7F9F121CEE9B5400AA622D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4F7F9F111CEE9B5400AA622D /* ESTranslate.xcplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4F7F9F131CEE9B5400AA622D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F7F9F141CEE9B5400AA622D /* AppKit.framework */,
+				4F7F9F161CEE9B5400AA622D /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4F7F9F181CEE9B5400AA622D /* ESTranslate */ = {
+			isa = PBXGroup;
+			children = (
+				4F7F9F1C1CEE9B5400AA622D /* ESTranslate.h */,
+				4F7F9F1D1CEE9B5400AA622D /* ESTranslate.m */,
+				4F7F9F1F1CEE9B5400AA622D /* NSObject_Extension.h */,
+				4F7F9F201CEE9B5400AA622D /* NSObject_Extension.m */,
+				4F7F9F221CEE9B5400AA622D /* Info.plist */,
+				4F7F9F191CEE9B5400AA622D /* Supporting Files */,
+			);
+			path = ESTranslate;
+			sourceTree = "<group>";
+		};
+		4F7F9F191CEE9B5400AA622D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4F7F9F1A1CEE9B5400AA622D /* ESTranslate.xcscheme */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4F7F9F101CEE9B5400AA622D /* ESTranslate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F7F9F251CEE9B5400AA622D /* Build configuration list for PBXNativeTarget "ESTranslate" */;
+			buildPhases = (
+				4F7F9F0D1CEE9B5400AA622D /* Sources */,
+				4F7F9F0E1CEE9B5400AA622D /* Resources */,
+				4F7F9F0F1CEE9B5400AA622D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ESTranslate;
+			productName = ESTranslate;
+			productReference = 4F7F9F111CEE9B5400AA622D /* ESTranslate.xcplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4F7F9F091CEE9B5400AA622D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = EnjoySR;
+				TargetAttributes = {
+					4F7F9F101CEE9B5400AA622D = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 4F7F9F0C1CEE9B5400AA622D /* Build configuration list for PBXProject "ESTranslate" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4F7F9F081CEE9B5400AA622D;
+			productRefGroup = 4F7F9F121CEE9B5400AA622D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4F7F9F101CEE9B5400AA622D /* ESTranslate */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4F7F9F0E1CEE9B5400AA622D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F7F9F1B1CEE9B5400AA622D /* ESTranslate.xcscheme in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4F7F9F0D1CEE9B5400AA622D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F7F9F1E1CEE9B5400AA622D /* ESTranslate.m in Sources */,
+				4F7F9F211CEE9B5400AA622D /* NSObject_Extension.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		4F7F9F231CEE9B5400AA622D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		4F7F9F241CEE9B5400AA622D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+			};
+			name = Release;
+		};
+		4F7F9F261CEE9B5400AA622D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				INFOPLIST_FILE = ESTranslate/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = EnjoySR.ESTranslate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Debug;
+		};
+		4F7F9F271CEE9B5400AA622D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				INFOPLIST_FILE = ESTranslate/Info.plist;
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = EnjoySR.ESTranslate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4F7F9F0C1CEE9B5400AA622D /* Build configuration list for PBXProject "ESTranslate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F7F9F231CEE9B5400AA622D /* Debug */,
+				4F7F9F241CEE9B5400AA622D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F7F9F251CEE9B5400AA622D /* Build configuration list for PBXNativeTarget "ESTranslate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F7F9F261CEE9B5400AA622D /* Debug */,
+				4F7F9F271CEE9B5400AA622D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4F7F9F091CEE9B5400AA622D /* Project object */;
+}
