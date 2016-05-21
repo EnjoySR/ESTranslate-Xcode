@@ -10,5 +10,5 @@
 
 ## 使用方式
 
-选中需要翻译的单词/句子，按 control+shift+t
+- 选中需要翻译的单词/句子，按 control+shift+t
 
