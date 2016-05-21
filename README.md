@@ -1,5 +1,7 @@
 # ESTranslate-Xcode
 
+- 快速翻译Xcode代码里面的单词。
+
 ## 图例
 
 ![Screenshot](https://raw.githubusercontent.com/EnjoySR/ESTranslate-Xcode/master/ScreenShot/translate.gif)
