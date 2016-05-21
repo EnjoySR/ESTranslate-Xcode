@@ -7,23 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F353CF61CF06AAB003069F0 /* ESTranslate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F353CE81CF06AAB003069F0 /* ESTranslate.m */; };
+		4F353CF71CF06AAB003069F0 /* NSObject_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F353CEA1CF06AAB003069F0 /* NSObject_Extension.m */; };
+		4F353CF81CF06AAB003069F0 /* ESTranslateResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F353CED1CF06AAB003069F0 /* ESTranslateResult.m */; };
+		4F353CFA1CF06AAB003069F0 /* ESPaopaoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F353CF41CF06AAB003069F0 /* ESPaopaoView.m */; };
+		4F353CFB1CF06AAB003069F0 /* ESPaopaoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F353CF51CF06AAB003069F0 /* ESPaopaoView.xib */; };
+		4F353CFF1CF06AE8003069F0 /* ESTranslateDataTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F353CFE1CF06AE8003069F0 /* ESTranslateDataTool.m */; };
 		4F7F9F151CEE9B5400AA622D /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7F9F141CEE9B5400AA622D /* AppKit.framework */; };
 		4F7F9F171CEE9B5400AA622D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7F9F161CEE9B5400AA622D /* Foundation.framework */; };
 		4F7F9F1B1CEE9B5400AA622D /* ESTranslate.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = 4F7F9F1A1CEE9B5400AA622D /* ESTranslate.xcscheme */; };
-		4F7F9F1E1CEE9B5400AA622D /* ESTranslate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F9F1D1CEE9B5400AA622D /* ESTranslate.m */; };
-		4F7F9F211CEE9B5400AA622D /* NSObject_Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7F9F201CEE9B5400AA622D /* NSObject_Extension.m */; };
+		4F7F9F8B1CEEB1D900AA622D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F7F9F8A1CEEB1D900AA622D /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F353CE71CF06AAB003069F0 /* ESTranslate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTranslate.h; sourceTree = "<group>"; };
+		4F353CE81CF06AAB003069F0 /* ESTranslate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTranslate.m; sourceTree = "<group>"; };
+		4F353CE91CF06AAB003069F0 /* NSObject_Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObject_Extension.h; sourceTree = "<group>"; };
+		4F353CEA1CF06AAB003069F0 /* NSObject_Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObject_Extension.m; sourceTree = "<group>"; };
+		4F353CEC1CF06AAB003069F0 /* ESTranslateResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTranslateResult.h; sourceTree = "<group>"; };
+		4F353CED1CF06AAB003069F0 /* ESTranslateResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTranslateResult.m; sourceTree = "<group>"; };
+		4F353CF31CF06AAB003069F0 /* ESPaopaoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESPaopaoView.h; sourceTree = "<group>"; };
+		4F353CF41CF06AAB003069F0 /* ESPaopaoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESPaopaoView.m; sourceTree = "<group>"; };
+		4F353CF51CF06AAB003069F0 /* ESPaopaoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESPaopaoView.xib; sourceTree = "<group>"; };
+		4F353CFD1CF06AE8003069F0 /* ESTranslateDataTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTranslateDataTool.h; sourceTree = "<group>"; };
+		4F353CFE1CF06AE8003069F0 /* ESTranslateDataTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTranslateDataTool.m; sourceTree = "<group>"; };
 		4F7F9F111CEE9B5400AA622D /* ESTranslate.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ESTranslate.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F7F9F141CEE9B5400AA622D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		4F7F9F161CEE9B5400AA622D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		4F7F9F1A1CEE9B5400AA622D /* ESTranslate.xcscheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = ESTranslate.xcscheme; path = ESTranslate.xcodeproj/xcshareddata/xcschemes/ESTranslate.xcscheme; sourceTree = SOURCE_ROOT; };
-		4F7F9F1C1CEE9B5400AA622D /* ESTranslate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESTranslate.h; sourceTree = "<group>"; };
-		4F7F9F1D1CEE9B5400AA622D /* ESTranslate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ESTranslate.m; sourceTree = "<group>"; };
-		4F7F9F1F1CEE9B5400AA622D /* NSObject_Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSObject_Extension.h; sourceTree = "<group>"; };
-		4F7F9F201CEE9B5400AA622D /* NSObject_Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSObject_Extension.m; sourceTree = "<group>"; };
 		4F7F9F221CEE9B5400AA622D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F7F9F8A1CEEB1D900AA622D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +52,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F353CE61CF06AAB003069F0 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				4F353CE71CF06AAB003069F0 /* ESTranslate.h */,
+				4F353CE81CF06AAB003069F0 /* ESTranslate.m */,
+				4F353CE91CF06AAB003069F0 /* NSObject_Extension.h */,
+				4F353CEA1CF06AAB003069F0 /* NSObject_Extension.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		4F353CEB1CF06AAB003069F0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4F353CEC1CF06AAB003069F0 /* ESTranslateResult.h */,
+				4F353CED1CF06AAB003069F0 /* ESTranslateResult.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4F353CF21CF06AAB003069F0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4F353CF31CF06AAB003069F0 /* ESPaopaoView.h */,
+				4F353CF41CF06AAB003069F0 /* ESPaopaoView.m */,
+				4F353CF51CF06AAB003069F0 /* ESPaopaoView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4F353CFC1CF06AE8003069F0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4F353CFD1CF06AE8003069F0 /* ESTranslateDataTool.h */,
+				4F353CFE1CF06AE8003069F0 /* ESTranslateDataTool.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		4F7F9F081CEE9B5400AA622D = {
 			isa = PBXGroup;
 			children = (
@@ -68,10 +120,11 @@
 		4F7F9F181CEE9B5400AA622D /* ESTranslate */ = {
 			isa = PBXGroup;
 			children = (
-				4F7F9F1C1CEE9B5400AA622D /* ESTranslate.h */,
-				4F7F9F1D1CEE9B5400AA622D /* ESTranslate.m */,
-				4F7F9F1F1CEE9B5400AA622D /* NSObject_Extension.h */,
-				4F7F9F201CEE9B5400AA622D /* NSObject_Extension.m */,
+				4F353CFC1CF06AE8003069F0 /* Common */,
+				4F353CE61CF06AAB003069F0 /* Main */,
+				4F353CEB1CF06AAB003069F0 /* Model */,
+				4F353CF21CF06AAB003069F0 /* View */,
+				4F7F9F8A1CEEB1D900AA622D /* Assets.xcassets */,
 				4F7F9F221CEE9B5400AA622D /* Info.plist */,
 				4F7F9F191CEE9B5400AA622D /* Supporting Files */,
 			);
@@ -142,7 +195,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F353CFB1CF06AAB003069F0 /* ESPaopaoView.xib in Resources */,
 				4F7F9F1B1CEE9B5400AA622D /* ESTranslate.xcscheme in Resources */,
+				4F7F9F8B1CEEB1D900AA622D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,8 +208,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F7F9F1E1CEE9B5400AA622D /* ESTranslate.m in Sources */,
-				4F7F9F211CEE9B5400AA622D /* NSObject_Extension.m in Sources */,
+				4F353CFF1CF06AE8003069F0 /* ESTranslateDataTool.m in Sources */,
+				4F353CFA1CF06AAB003069F0 /* ESPaopaoView.m in Sources */,
+				4F353CF61CF06AAB003069F0 /* ESTranslate.m in Sources */,
+				4F353CF71CF06AAB003069F0 /* NSObject_Extension.m in Sources */,
+				4F353CF81CF06AAB003069F0 /* ESTranslateResult.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +341,7 @@
 				4F7F9F271CEE9B5400AA622D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

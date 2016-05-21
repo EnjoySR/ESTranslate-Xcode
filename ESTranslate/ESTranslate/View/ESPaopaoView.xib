@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe" customClass="ESPaopaoView">
+            <rect key="frame" x="0.0" y="0.0" width="220" height="99"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView translatesAutoresizingMaskIntoConstraints="NO" id="3Uz-nz-m7P">
+                    <rect key="frame" x="0.0" y="0.0" width="110" height="99"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="axesIndependently" image="icon_paopao_middle_left_highlighted" id="G98-jH-ujM"/>
+                </imageView>
+                <imageView translatesAutoresizingMaskIntoConstraints="NO" id="31g-AG-a0b">
+                    <rect key="frame" x="110" y="0.0" width="110" height="99"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="axesIndependently" image="icon_paopao_middle_right_highlighted" id="nao-dK-7YW"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="chg-It-k9C">
+                    <rect key="frame" x="8" y="72" width="47" height="19"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Label" id="hvq-2h-XmF">
+                        <font key="font" metaFont="systemBold" size="16"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="8nj-fc-PL9">
+                    <rect key="frame" x="8" y="47" width="37" height="17"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Label" id="d0x-MX-gp8">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="31g-AG-a0b" secondAttribute="trailing" id="7hP-Z9-42P"/>
+                <constraint firstItem="31g-AG-a0b" firstAttribute="width" secondItem="c22-O7-iKe" secondAttribute="width" multiplier="0.5" id="85z-ui-G9h"/>
+                <constraint firstItem="chg-It-k9C" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="10" id="8IK-1A-0vx"/>
+                <constraint firstItem="3Uz-nz-m7P" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="Cjo-4K-KYA"/>
+                <constraint firstItem="3Uz-nz-m7P" firstAttribute="width" secondItem="c22-O7-iKe" secondAttribute="width" multiplier="0.5" id="Mgh-Ga-37e"/>
+                <constraint firstAttribute="bottom" secondItem="3Uz-nz-m7P" secondAttribute="bottom" id="YHc-eo-GgS"/>
+                <constraint firstItem="31g-AG-a0b" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="dH5-IH-EJs"/>
+                <constraint firstItem="8nj-fc-PL9" firstAttribute="leading" secondItem="chg-It-k9C" secondAttribute="leading" id="hxE-qC-kKp"/>
+                <constraint firstItem="chg-It-k9C" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="8" id="l0u-1X-VjP"/>
+                <constraint firstItem="8nj-fc-PL9" firstAttribute="top" secondItem="chg-It-k9C" secondAttribute="bottom" constant="8" id="nMN-8s-eZP"/>
+                <constraint firstAttribute="bottom" secondItem="31g-AG-a0b" secondAttribute="bottom" id="uTm-VQ-gGi"/>
+                <constraint firstItem="3Uz-nz-m7P" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="vOG-5z-tu6"/>
+            </constraints>
+            <connections>
+                <outlet property="destinationLabel" destination="8nj-fc-PL9" id="gXK-ZG-eCt"/>
+                <outlet property="sourceLabel" destination="chg-It-k9C" id="FNE-0x-h9S"/>
+            </connections>
+            <point key="canvasLocation" x="126.5" y="301.5"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="icon_paopao_middle_left_highlighted" width="19.5" height="24.5"/>
+        <image name="icon_paopao_middle_right_highlighted" width="20.5" height="24"/>
+    </resources>
+</document>
