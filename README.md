@@ -15,7 +15,7 @@
 - 选中需要翻译的单词/句子，按 control+shift+t
 
 ## 设置百度翻译AppId（没图😁自行脑补）
-百度每月免费翻译200万个字节，如果大家都使用的话会超过上限，建议设置自己的AppId，自己使用就不用担心这个问题啦～
+百度每月免费翻译200万个字符，如果大家都使用的话会超过上限，建议设置自己的AppId，自己使用就不用担心这个问题啦～
 
 - 进入到百度翻译开发者平台：[http://api.fanyi.baidu.com/api/trans/product/index](http://api.fanyi.baidu.com/api/trans/product/index)
 - 点击【申请接入】(自已登录)
