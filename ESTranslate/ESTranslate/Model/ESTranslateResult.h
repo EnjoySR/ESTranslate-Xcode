@@ -11,13 +11,19 @@
 @class TransResult;
 @interface ESTranslateResult : NSObject
 
+- (instancetype)initWithDict:(NSDictionary *)dict;
+
+#pragma mark - baidu
+
+@property (nonatomic, copy) NSString *error_code;
+
+@property (nonatomic, copy) NSString *error_msg;
+
 @property (nonatomic, copy) NSString *to;
 
 @property (nonatomic, strong) NSArray<TransResult *> *trans_result;
 
 @property (nonatomic, copy) NSString *from;
-
-- (instancetype)initWithDict:(NSDictionary *)dict;
 
 @end
 @interface TransResult : NSObject

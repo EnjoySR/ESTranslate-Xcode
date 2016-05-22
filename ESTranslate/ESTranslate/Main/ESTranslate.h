@@ -8,14 +8,16 @@
 
 #import <AppKit/AppKit.h>
 
-@class ESTranslate;
+@class ESTranslate,ESTranslateResult;
 
-static ESTranslate *sharedPlugin;
 
 @interface ESTranslate : NSObject
-
++ (void)setPlugin:(ESTranslate *)plugin;
 + (instancetype)sharedPlugin;
 - (id)initWithBundle:(NSBundle *)plugin;
 
 @property (nonatomic, strong, readonly) NSBundle* bundle;
+
+- (void)showSetupAppidVC;
+
 @end

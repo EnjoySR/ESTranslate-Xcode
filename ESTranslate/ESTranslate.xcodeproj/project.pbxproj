@@ -13,6 +13,8 @@
 		4F353CFA1CF06AAB003069F0 /* ESPaopaoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F353CF41CF06AAB003069F0 /* ESPaopaoView.m */; };
 		4F353CFB1CF06AAB003069F0 /* ESPaopaoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F353CF51CF06AAB003069F0 /* ESPaopaoView.xib */; };
 		4F353CFF1CF06AE8003069F0 /* ESTranslateDataTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F353CFE1CF06AE8003069F0 /* ESTranslateDataTool.m */; };
+		4F5077C81CF2072B009D05D3 /* ESSetupAppIdVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5077C61CF2072B009D05D3 /* ESSetupAppIdVC.m */; };
+		4F5077C91CF2072B009D05D3 /* ESSetupAppIdVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F5077C71CF2072B009D05D3 /* ESSetupAppIdVC.xib */; };
 		4F7F9F151CEE9B5400AA622D /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7F9F141CEE9B5400AA622D /* AppKit.framework */; };
 		4F7F9F171CEE9B5400AA622D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7F9F161CEE9B5400AA622D /* Foundation.framework */; };
 		4F7F9F1B1CEE9B5400AA622D /* ESTranslate.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = 4F7F9F1A1CEE9B5400AA622D /* ESTranslate.xcscheme */; };
@@ -31,6 +33,10 @@
 		4F353CF51CF06AAB003069F0 /* ESPaopaoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESPaopaoView.xib; sourceTree = "<group>"; };
 		4F353CFD1CF06AE8003069F0 /* ESTranslateDataTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTranslateDataTool.h; sourceTree = "<group>"; };
 		4F353CFE1CF06AE8003069F0 /* ESTranslateDataTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTranslateDataTool.m; sourceTree = "<group>"; };
+		4F5077B91CF1E8C2009D05D3 /* ESConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ESConfig.h; sourceTree = "<group>"; };
+		4F5077C51CF2072B009D05D3 /* ESSetupAppIdVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESSetupAppIdVC.h; sourceTree = "<group>"; };
+		4F5077C61CF2072B009D05D3 /* ESSetupAppIdVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESSetupAppIdVC.m; sourceTree = "<group>"; };
+		4F5077C71CF2072B009D05D3 /* ESSetupAppIdVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESSetupAppIdVC.xib; sourceTree = "<group>"; };
 		4F7F9F111CEE9B5400AA622D /* ESTranslate.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ESTranslate.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F7F9F141CEE9B5400AA622D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		4F7F9F161CEE9B5400AA622D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -87,8 +93,19 @@
 			children = (
 				4F353CFD1CF06AE8003069F0 /* ESTranslateDataTool.h */,
 				4F353CFE1CF06AE8003069F0 /* ESTranslateDataTool.m */,
+				4F5077B91CF1E8C2009D05D3 /* ESConfig.h */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		4F5077BA1CF1F1B6009D05D3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4F5077C51CF2072B009D05D3 /* ESSetupAppIdVC.h */,
+				4F5077C61CF2072B009D05D3 /* ESSetupAppIdVC.m */,
+				4F5077C71CF2072B009D05D3 /* ESSetupAppIdVC.xib */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		4F7F9F081CEE9B5400AA622D = {
@@ -124,6 +141,7 @@
 				4F353CE61CF06AAB003069F0 /* Main */,
 				4F353CEB1CF06AAB003069F0 /* Model */,
 				4F353CF21CF06AAB003069F0 /* View */,
+				4F5077BA1CF1F1B6009D05D3 /* Controller */,
 				4F7F9F8A1CEEB1D900AA622D /* Assets.xcassets */,
 				4F7F9F221CEE9B5400AA622D /* Info.plist */,
 				4F7F9F191CEE9B5400AA622D /* Supporting Files */,
@@ -198,6 +216,7 @@
 				4F353CFB1CF06AAB003069F0 /* ESPaopaoView.xib in Resources */,
 				4F7F9F1B1CEE9B5400AA622D /* ESTranslate.xcscheme in Resources */,
 				4F7F9F8B1CEEB1D900AA622D /* Assets.xcassets in Resources */,
+				4F5077C91CF2072B009D05D3 /* ESSetupAppIdVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +230,7 @@
 				4F353CFF1CF06AE8003069F0 /* ESTranslateDataTool.m in Sources */,
 				4F353CFA1CF06AAB003069F0 /* ESPaopaoView.m in Sources */,
 				4F353CF61CF06AAB003069F0 /* ESTranslate.m in Sources */,
+				4F5077C81CF2072B009D05D3 /* ESSetupAppIdVC.m in Sources */,
 				4F353CF71CF06AAB003069F0 /* NSObject_Extension.m in Sources */,
 				4F353CF81CF06AAB003069F0 /* ESTranslateResult.m in Sources */,
 			);

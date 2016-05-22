@@ -9,8 +9,16 @@
 #import "ESTranslateDataTool.h"
 #import "ESTranslateResult.h"
 #import <CommonCrypto/CommonDigest.h>
+#import "ESConfig.h"
+
+@interface ESTranslateDataTool()
+
+@property (nonatomic, strong) NSArray *keys;
+
+@end
 
 @implementation ESTranslateDataTool
+
 
 + (instancetype)sharedTool{
     static ESTranslateDataTool *instance;
@@ -21,17 +29,30 @@
     return instance;
 }
 
+#pragma mark - baidu
+
 - (void)translate:(NSString *)target compeletion:(void(^)(ESTranslateResult *result, NSError *error))compeletion{
     
-    NSString *appid = @"20160520000021491";
+    // 一堆参数
+    NSString *appid = kBaiduAppId;
+    NSString *saveId = [[NSUserDefaults standardUserDefaults] stringForKey:kBaiduAppIdSaveKey];
+    if (saveId != nil) {
+        appid = saveId;
+    }
+    NSString *appsecret = kBaiduAppSecret;
+    NSString *saveSecret = [[NSUserDefaults standardUserDefaults] stringForKey:kBaiduAppSecretSaveKey];
+    if (saveSecret != nil) {
+        appsecret = saveSecret;
+    }
     NSString *q = target;
     NSString *from = @"auto";
     NSString *to = @"zh";
     NSString *salt = [NSString stringWithFormat:@"%f",NSTimeIntervalSince1970];
-    NSString *sign = [self sign:@[appid,q,salt, @"Bw6gJBkLUWMYiCW2l5B4"]];
+    NSString *sign = [self sign:@[appid,q,salt, appsecret]];
     NSString *urlString = [NSString stringWithFormat:@"http://api.fanyi.baidu.com/api/trans/vip/translate?appid=%@&q=%@&from=%@&to=%@&salt=%@&sign=%@",appid,q,from,to,salt,sign];
     urlString = [urlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     NSURL *url = [NSURL URLWithString:urlString];
+    // 发起请求
     [[[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (error != nil){
             dispatch_async(dispatch_get_main_queue(), ^{

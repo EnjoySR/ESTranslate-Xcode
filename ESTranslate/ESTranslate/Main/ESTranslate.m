@@ -9,20 +9,28 @@
 #import "ESTranslate.h"
 #import "ESPaopaoView.h"
 #import "ESTranslateDataTool.h"
+#import "ESTranslateResult.h"
+#import "ESSetupAppIdVC.h"
+#import "ESConfig.h"
 
 @interface ESTranslate()
 
 @property (nonatomic, strong, readwrite) NSBundle *bundle;
 @property (nonatomic) NSTextView *currentTextView;
+@property (nonatomic, strong) ESSetupAppIdVC *setupAppIdvc;
 @end
 
 @implementation ESTranslate
+
+static ESTranslate *sharedPlugin;
++ (void)setPlugin:(ESTranslate *)plugin{
+    sharedPlugin = plugin;
+}
 
 + (instancetype)sharedPlugin
 {
     return sharedPlugin;
 }
-
 - (id)initWithBundle:(NSBundle *)plugin
 {
     if (self = [super init]) {
@@ -44,11 +52,29 @@
     // Sample Menu Item:
     NSMenuItem *menuItem = [[NSApp mainMenu] itemWithTitle:@"Edit"];
     if (menuItem) {
-        [[menuItem submenu] addItem:[NSMenuItem separatorItem]];
-        NSMenuItem *actionMenuItem = [[NSMenuItem alloc] initWithTitle:@"Do Action" action:@selector(translateMenuItemClick) keyEquivalent:@"T"];
-        [actionMenuItem setKeyEquivalentModifierMask:NSAlphaShiftKeyMask | NSControlKeyMask];
-        [actionMenuItem setTarget:self];
-        [[menuItem submenu] addItem:actionMenuItem];
+        
+        NSMenu *menu = [[NSMenu alloc] init];
+        
+        //Input JSON window
+        NSMenuItem *inputJsonWindow = [[NSMenuItem alloc] initWithTitle:@"Translate the words" action:@selector(translateMenuItemClick) keyEquivalent:@"T"];
+        [inputJsonWindow setKeyEquivalentModifierMask:NSAlphaShiftKeyMask | NSControlKeyMask];
+        inputJsonWindow.target = self;
+        [menu addItem:inputJsonWindow];
+        
+        //Setting
+        NSMenuItem *settingWindow = [[NSMenuItem alloc] initWithTitle:@"Setup Baidu AppId" action:@selector(showSetupAppidVC) keyEquivalent:@""];
+        settingWindow.target = self;
+        [menu addItem:settingWindow];
+        
+        NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:@"ESTranslate" action:nil keyEquivalent:@""];
+        item.submenu = menu;
+        [[menuItem submenu] addItem:item];
+        
+//        [[menuItem submenu] addItem:[NSMenuItem separatorItem]];
+//        NSMenuItem *actionMenuItem = [[NSMenuItem alloc] initWithTitle:@"ESTranslate" action:@selector(translateMenuItemClick) keyEquivalent:@"T"];
+//        [actionMenuItem setKeyEquivalentModifierMask:NSAlphaShiftKeyMask | NSControlKeyMask];
+//        [actionMenuItem setTarget:self];
+//        [[menuItem submenu] addItem:actionMenuItem];
     }
 }
 
@@ -57,16 +83,20 @@
     if (self.currentTextView == nil) {
         return;
     }
+    NSLog(@"%@",sharedPlugin);
     NSRange range = self.currentTextView.selectedRange;
     NSString *src = [self dealSelectedString:[self.currentTextView.string substringWithRange:range]];
     __weak typeof(self) weakSelf = self;
     [[ESTranslateDataTool sharedTool] translate:src compeletion:^(ESTranslateResult *result, NSError *error) {
+        // 判断从未设置过Appid
+        if ([result.error_code isEqualToString:@"54004"] && [[NSUserDefaults standardUserDefaults] stringForKey:kBaiduAppIdSaveKey] == nil) {
+            [weakSelf showSetupAppidVC];
+            return;
+        }
         NSRect rect = [weakSelf.currentTextView.textContainer.layoutManager boundingRectForGlyphRange:range inTextContainer:weakSelf.currentTextView.textContainer];
         ESPaopaoView *v = [ESPaopaoView sharedPaopaoView];
         [v setupInfo:result];
-        
         NSRect frame = v.frame;
-        
         frame.origin.y = rect.origin.y - frame.size.height;
         frame.origin.x = CGRectGetMidX(NSRectToCGRect(rect)) - frame.size.width / 2;
         v.frame = frame;
@@ -80,6 +110,8 @@
         self.currentTextView = text;
     }
 }
+
+#pragma mark - private method
 
 - (NSString *)dealSelectedString:(NSString *)str{
     str = [str stringByReplacingOccurrencesOfString:@"\n" withString:@" "];
@@ -97,6 +129,11 @@
         [result appendString:[NSString stringWithFormat:@"%c", ch]];
     }
     return [result copy];
+}
+
+- (void)showSetupAppidVC{
+    self.setupAppIdvc = [[ESSetupAppIdVC alloc] initWithWindowNibName:@"ESSetupAppIdVC"];
+    [self.setupAppIdvc showWindow:self.setupAppIdvc];
 }
 
 - (void)dealloc

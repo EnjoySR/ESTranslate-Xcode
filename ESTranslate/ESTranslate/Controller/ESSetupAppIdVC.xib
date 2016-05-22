@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ESSetupAppIdVC">
+            <connections>
+                <outlet property="appidField" destination="PgL-q2-v1v" id="FUl-Vt-kfk"/>
+                <outlet property="appsecretField" destination="wiQ-dc-xPN" id="r3f-sH-tgU"/>
+                <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="设置百度翻译APP ID和密钥" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+            <rect key="contentRect" x="196" y="240" width="343" height="157"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <view key="contentView" id="se5-gp-TjO">
+                <rect key="frame" x="0.0" y="0.0" width="343" height="157"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PgL-q2-v1v">
+                        <rect key="frame" x="27" y="71" width="290" height="22"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="请输入百度翻译APP ID" drawsBackground="YES" id="hXs-88-onI">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wiQ-dc-xPN">
+                        <rect key="frame" x="27" y="39" width="290" height="22"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="请输入百度翻译密钥" drawsBackground="YES" id="QgY-fZ-mub">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZyX-YK-7TO">
+                        <rect key="frame" x="242" y="3" width="81" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="69" id="i3K-bB-4AH"/>
+                        </constraints>
+                        <buttonCell key="cell" type="push" title="保存" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3V1-Mx-e0V">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" size="13" name=".PingFangSC-Regular"/>
+                            <connections>
+                                <action selector="saveButtonClick:" target="-2" id="IRC-wI-V0a"/>
+                            </connections>
+                        </buttonCell>
+                    </button>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CPF-lm-mBK">
+                        <rect key="frame" x="161" y="3" width="81" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="69" id="qBz-aM-FLq"/>
+                        </constraints>
+                        <buttonCell key="cell" type="push" title="查看步骤" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="VKo-Pz-w9F">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" size="13" name=".PingFangSC-Regular"/>
+                            <connections>
+                                <action selector="seeTheStepsButtonClick:" target="-2" id="exd-nN-cDl"/>
+                            </connections>
+                        </buttonCell>
+                    </button>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="DF5-Mr-qxl">
+                        <rect key="frame" x="25" y="101" width="294" height="51"/>
+                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="由于百度翻译单个账户200万字符以内免费，多人使用可能账户余额不足，请前往百度翻译开发者中心注册成为开发者，更换AppId以及密钥" id="9eU-0z-ZK3">
+                            <font key="font" size="13" name=".PingFangSC-Regular"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="DF5-Mr-qxl" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="5" id="5zT-yb-nBe"/>
+                    <constraint firstItem="PgL-q2-v1v" firstAttribute="top" secondItem="DF5-Mr-qxl" secondAttribute="bottom" constant="8" id="7TO-7M-yyw"/>
+                    <constraint firstItem="ZyX-YK-7TO" firstAttribute="top" secondItem="wiQ-dc-xPN" secondAttribute="bottom" constant="8" id="E7Z-8N-fQp"/>
+                    <constraint firstItem="PgL-q2-v1v" firstAttribute="trailing" secondItem="DF5-Mr-qxl" secondAttribute="trailing" id="G8h-p6-yzL"/>
+                    <constraint firstItem="ZyX-YK-7TO" firstAttribute="trailing" secondItem="wiQ-dc-xPN" secondAttribute="trailing" id="S7d-nb-9fW"/>
+                    <constraint firstItem="wiQ-dc-xPN" firstAttribute="leading" secondItem="PgL-q2-v1v" secondAttribute="leading" id="Xnm-z8-StP"/>
+                    <constraint firstItem="DF5-Mr-qxl" firstAttribute="centerX" secondItem="se5-gp-TjO" secondAttribute="centerX" id="ZWC-Cj-6RO"/>
+                    <constraint firstItem="wiQ-dc-xPN" firstAttribute="trailing" secondItem="PgL-q2-v1v" secondAttribute="trailing" id="Zl9-o4-g6g"/>
+                    <constraint firstItem="PgL-q2-v1v" firstAttribute="centerX" secondItem="DF5-Mr-qxl" secondAttribute="centerX" id="bqi-Ab-tq0"/>
+                    <constraint firstItem="wiQ-dc-xPN" firstAttribute="top" secondItem="PgL-q2-v1v" secondAttribute="bottom" constant="10" id="gfE-g7-RHO"/>
+                    <constraint firstItem="PgL-q2-v1v" firstAttribute="leading" secondItem="DF5-Mr-qxl" secondAttribute="leading" id="kcP-gg-rUm"/>
+                    <constraint firstItem="CPF-lm-mBK" firstAttribute="top" secondItem="ZyX-YK-7TO" secondAttribute="top" id="nqS-iW-DnC"/>
+                    <constraint firstItem="ZyX-YK-7TO" firstAttribute="leading" secondItem="CPF-lm-mBK" secondAttribute="trailing" constant="12" id="xPs-5f-xZ3"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
+            </connections>
+            <point key="canvasLocation" x="542.5" y="268.5"/>
+        </window>
+    </objects>
+</document>

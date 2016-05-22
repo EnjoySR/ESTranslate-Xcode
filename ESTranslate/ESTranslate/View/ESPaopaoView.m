@@ -8,6 +8,7 @@
 
 #import "ESPaopaoView.h"
 #import "ESTranslateResult.h"
+#import "ESTranslate.h"
 
 @interface ESPaopaoView()
 
@@ -23,6 +24,8 @@
 @property (nonatomic, assign) NSPoint startPoint;
 @property (nonatomic, assign) NSRect startFrame;
 @property (nonatomic, assign) NSSize contentSize;
+
+@property (nonatomic, strong) ESTranslateResult *translateResult;
 
 @end
 
@@ -66,6 +69,7 @@
     _removeTimer = nil;
 }
 
+/// 双击移除当前paopaoView
 - (void)addGesture{
     NSClickGestureRecognizer *ges = [[NSClickGestureRecognizer alloc] initWithTarget:self action:@selector(doubleClick)];
     ges.numberOfClicksRequired = 2;
@@ -79,9 +83,18 @@
 ///
 /// @param transInfo <#transInfo description#>
 - (void)setupInfo:(ESTranslateResult *)transInfo{
-    if (transInfo.trans_result.count <= 0) {
-        self.sourceLabel.stringValue = @"Error";
-        self.destinationLabel.stringValue = @"The reason is unknown~( •̅_•̅ )";
+    self.translateResult = transInfo;
+    if (transInfo.error_code != nil && ![transInfo.error_code isEqualToString:@"52000"]) {
+        if ([transInfo.error_code isEqualToString:@"54004"]) {
+            self.sourceLabel.stringValue = @"账户余额不足";
+            self.destinationLabel.stringValue = @"当月翻译字符超过免费字符数(200万)，建议点击此弹框更换appid";
+        }else if ([transInfo.error_code isEqualToString:@"52003"]){
+            self.sourceLabel.stringValue = @"未授权用户";
+            self.destinationLabel.stringValue = @"您的appid或者密钥不正确，点击此弹框更换appid";
+        }else{
+            self.sourceLabel.stringValue = [NSString stringWithFormat:@"错误码: %@", transInfo.error_code];
+            self.destinationLabel.stringValue = @"( •̅_•̅ )具体原因请点击此弹框前往百度翻译开放平台查看对应错误信息~";
+        }
     }else{
         self.sourceLabel.stringValue = transInfo.trans_result.firstObject.src;
         NSArray *dstArray = [transInfo.trans_result valueForKey:@"dst"];
@@ -118,9 +131,7 @@
     self.frame = frame;
 }
 
-/// 实现点击一次就不再消失paopaoView，再点击一次就消失paopaoView
-
-
+// 点击一次，移除timer
 - (void)mouseDown:(NSEvent *)theEvent{
     if ([_removeTimer isValid]) {
         [_removeTimer invalidate];
@@ -130,6 +141,20 @@
     self.startFrame = self.frame;
     NSTextView *textView = (NSTextView *)self.superview;
     self.contentSize = textView.textContainer.size;
+    
+    // 处理翻译错误点击paopaoView
+    if (self.translateResult.error_code != nil && ![self.translateResult.error_code isEqualToString:@"52000"]) {
+        if ([self.translateResult.error_code isEqualToString:@"54004"] || [self.translateResult.error_code isEqualToString:@"52003"]) {
+            ESTranslate *translate = [ESTranslate sharedPlugin];
+            [translate showSetupAppidVC];
+            [self removeFromSuperview];
+        }else{
+            NSURL* url = [[ NSURL alloc ] initWithString :@"http://api.fanyi.baidu.com/api/trans/product/apidoc"];
+            [[NSWorkspace sharedWorkspace] openURL:url];
+            [self removeFromSuperview];
+        }
+    }
+    
 }
 
 - (void)mouseDragged:(NSEvent *)theEvent{
