@@ -55,11 +55,10 @@ static ESTranslate *sharedPlugin;
         
         NSMenu *menu = [[NSMenu alloc] init];
         
-        //Input JSON window
-        NSMenuItem *inputJsonWindow = [[NSMenuItem alloc] initWithTitle:@"Translate the words" action:@selector(translateMenuItemClick) keyEquivalent:@"T"];
-        [inputJsonWindow setKeyEquivalentModifierMask:NSAlphaShiftKeyMask | NSControlKeyMask];
-        inputJsonWindow.target = self;
-        [menu addItem:inputJsonWindow];
+        NSMenuItem *translate = [[NSMenuItem alloc] initWithTitle:@"Translate the words" action:@selector(translateMenuItemClick) keyEquivalent:@"T"];
+        [translate setKeyEquivalentModifierMask:NSAlphaShiftKeyMask | NSControlKeyMask];
+        translate.target = self;
+        [menu addItem:translate];
         
         //Setting
         NSMenuItem *settingWindow = [[NSMenuItem alloc] initWithTitle:@"Setup Baidu AppId" action:@selector(showSetupAppidVC) keyEquivalent:@""];
