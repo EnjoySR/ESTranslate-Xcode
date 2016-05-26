@@ -87,6 +87,10 @@ static ESTranslate *sharedPlugin;
     NSString *src = [self dealSelectedString:[self.currentTextView.string substringWithRange:range]];
     __weak typeof(self) weakSelf = self;
     [[ESTranslateDataTool sharedTool] translate:src compeletion:^(ESTranslateResult *result, NSError *error) {
+        if (error != nil){
+            // 暂时先返回。后续处理
+            return;
+        }
         // 判断从未设置过Appid
         if ([result.error_code isEqualToString:@"54004"] && [[NSUserDefaults standardUserDefaults] stringForKey:kBaiduAppIdSaveKey] == nil) {
             [weakSelf showSetupAppidVC];
