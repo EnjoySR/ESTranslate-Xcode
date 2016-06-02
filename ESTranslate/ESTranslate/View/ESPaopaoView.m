@@ -153,8 +153,11 @@
             [[NSWorkspace sharedWorkspace] openURL:url];
             [self removeFromSuperview];
         }
+    }else{
+        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+            system([[NSString stringWithFormat:@"say %@", self.sourceLabel.stringValue] cStringUsingEncoding:NSUTF8StringEncoding]);
+        });
     }
-    
 }
 
 - (void)mouseDragged:(NSEvent *)theEvent{
